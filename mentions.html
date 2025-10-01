@@ -3,11 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mentions légales – DIMO RYM FASHION</title>
-  <meta name="description" content="Mentions légales et politique de confidentialité du site DIMO RYM FASHION.">
+  <title>Mentions légales – DIAMO RYM FASHION</title>
+  <meta name="description" content="Mentions légales et politique de confidentialité du site DIAMO RYM FASHION.">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* Basic responsive styling */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -23,6 +22,7 @@
     .site-header {
       padding: 15px 0;
       background: inherit;
+      position: relative;
     }
 
     .logo {
@@ -46,10 +46,33 @@
     nav ul li a {
       text-decoration: none;
       color: inherit;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: 8px 12px;
+      display: block;
     }
 
     nav ul li a.active {
       font-weight: bold;
+      border-bottom: 2px solid currentColor;
+    }
+
+    /* Hamburger menu */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      position: absolute;
+      top: 18px;
+      right: 20px;
+    }
+
+    #menu-checkbox {
+      display: none;
+    }
+
+    #menu-checkbox:checked ~ nav ul {
+      display: flex;
     }
 
     main h1, main h2 {
@@ -82,9 +105,17 @@
 
     @media (max-width: 768px) {
       nav ul {
+        display: none;
         flex-direction: column;
         gap: 10px;
         text-align: center;
+        background: inherit;
+        padding: 15px;
+        margin: 0;
+      }
+
+      .menu-toggle {
+        display: block;
       }
 
       .logo {
@@ -97,7 +128,12 @@
 
 <header class="site-header">
   <div class="container">
-    <div class="logo">DIMO <span>RYM</span> FASHION</div>
+    <div class="logo">DIAMO <span>RYM</span> FASHION</div>
+
+    <!-- Hamburger menu -->
+    <input type="checkbox" id="menu-checkbox">
+    <label for="menu-checkbox" class="menu-toggle">☰</label>
+
     <nav>
       <ul>
         <li><a href="index.html">Accueil</a></li>
@@ -114,7 +150,7 @@
 <main class="container">
   <h1>Mentions légales</h1>
   <p>
-    DIMO RYM FASHION – SARL au capital de XXXX MAD –  
+    DIAMO RYM FASHION – SARL au capital de XXXX MAD –  
     Immatriculée au Registre du Commerce de Tanger sous le numéro XXXXX –  
     Siège social : LOTI ALMAJD RUE N 65, Tanger-Medina (AR).  
     Directeur de la publication : [Nom].
@@ -131,7 +167,7 @@
 
 <footer>
   <div class="container footer-content">
-    <p>© 2025 DIMO RYM FASHION</p>
+    <p>© 2025 DIAMO RYM FASHION</p>
     <nav>
       <a href="mentions.html">Mentions légales</a>
     </nav>
