@@ -6,6 +6,163 @@
   <title>DIAMO RYM FASHION – Luxe & Confection textile à Tanger</title>
   <meta name="description" content="DIAMO RYM FASHION, atelier de confection textile haut de gamme basé à Tanger. Luxe, raffinement et qualité internationale.">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Basic responsive styling */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .site-header {
+      padding: 15px 0;
+      background: inherit;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      font-weight: normal;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 10px 0 0 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    nav ul li a.active {
+      font-weight: bold;
+    }
+
+    main h1, main h2, main h3 {
+      margin-top: 20px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      margin-bottom: 20px;
+      font-size: 1.2em;
+    }
+
+    .btn, .btn-outline {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 5px;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn {
+      border: 1px solid currentColor;
+      color: inherit;
+    }
+
+    .btn-outline {
+      border: 1px solid currentColor;
+      background: none;
+      color: inherit;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: inherit;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .link {
+      text-decoration: none;
+      color: inherit;
+      font-weight: bold;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    footer {
+      background: inherit;
+      padding: 15px 0;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    footer nav a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+      .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      nav ul {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+
+      .logo {
+        text-align: center;
+      }
+
+      .hero-content h1 {
+        font-size: 2em;
+      }
+
+      .hero-content p {
+        font-size: 1em;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -27,15 +184,14 @@
 
 <main>
   <!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>DIAMO RYM FASHION</h1>
-    <p>Confection textile haut de gamme à Tanger – Élégance, savoir-faire et qualité internationale.</p>
-    <a href="services.html" class="btn">Nos services</a>
-    <a href="realisations.html" class="btn-outline">Nos réalisations</a>
-  </div>
-</section>
-
+  <section class="hero">
+    <div class="hero-content">
+      <h1>DIAMO RYM FASHION</h1>
+      <p>Confection textile haut de gamme à Tanger – Élégance, savoir-faire et qualité internationale.</p>
+      <a href="services.html" class="btn">Nos services</a>
+      <a href="realisations.html" class="btn-outline">Nos réalisations</a>
+    </div>
+  </section>
 
   <!-- PRESENTATION -->
   <section class="container">
@@ -74,8 +230,6 @@
     <a href="contact.html" class="btn">Nous contacter</a>
   </section>
 </main>
-
-
 
 <footer>
   <div class="container footer-content">
