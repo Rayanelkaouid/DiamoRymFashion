@@ -7,7 +7,6 @@
   <meta name="description" content="Actualités textile au Maroc : découvrez pourquoi Tanger est devenue une capitale mondiale de la confection textile.">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* Basic responsive styling */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -23,6 +22,7 @@
     .site-header {
       padding: 15px 0;
       background: inherit;
+      position: relative;
     }
 
     .logo {
@@ -34,6 +34,7 @@
       font-weight: normal;
     }
 
+    /* NAVIGATION */
     nav ul {
       list-style: none;
       padding: 0;
@@ -46,10 +47,49 @@
     nav ul li a {
       text-decoration: none;
       color: inherit;
+      padding: 8px 12px;
+      display: block;
     }
 
     nav ul li a.active {
       font-weight: bold;
+      border-bottom: 2px solid currentColor;
+    }
+
+    /* HAMBURGER */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      position: absolute;
+      top: 18px;
+      right: 20px;
+    }
+
+    #menu-checkbox {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: inherit;
+        padding: 15px;
+        margin: 0;
+      }
+
+      #menu-checkbox:checked ~ nav ul {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        text-align: center;
+      }
     }
 
     main h1 {
@@ -76,25 +116,6 @@
       text-decoration: none;
       color: inherit;
     }
-
-    /* Responsive adjustments */
-    @media (max-width: 1024px) {
-      nav ul {
-        justify-content: center;
-      }
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-      }
-
-      .logo {
-        text-align: center;
-      }
-    }
   </style>
 </head>
 <body>
@@ -102,6 +123,11 @@
 <header class="site-header">
   <div class="container">
     <div class="logo">DIAMO <span>RYM</span> FASHION</div>
+
+    <!-- Hamburger Menu -->
+    <input type="checkbox" id="menu-checkbox">
+    <label for="menu-checkbox" class="menu-toggle">☰</label>
+
     <nav>
       <ul>
         <li><a href="index.html">Accueil</a></li>
