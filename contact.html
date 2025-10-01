@@ -7,7 +7,6 @@
   <meta name="description" content="Contactez DIMO RYM FASHION pour vos projets de confection textile et vêtements sur mesure à Tanger.">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* Basic responsive styling */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -25,6 +24,7 @@
     .site-header {
       padding: 15px 0;
       background: inherit;
+      position: relative;
     }
 
     .logo {
@@ -38,6 +38,7 @@
       color: #F5F5F5;
     }
 
+    /* NAVIGATION */
     nav ul {
       list-style: none;
       padding: 0;
@@ -52,11 +53,50 @@
       color: inherit;
       text-transform: uppercase;
       font-weight: 500;
+      padding: 8px 12px;
+      display: block;
     }
 
     nav ul li a.active {
       color: #D4AF37;
       font-weight: bold;
+      border-bottom: 2px solid #D4AF37;
+    }
+
+    /* HAMBURGER */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      position: absolute;
+      top: 18px;
+      right: 20px;
+    }
+
+    #menu-checkbox {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: inherit;
+        padding: 15px;
+        margin: 0;
+      }
+
+      #menu-checkbox:checked ~ nav ul {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .logo {
+        text-align: center;
+      }
     }
 
     main h1, main h2 {
@@ -127,18 +167,7 @@
       color: #D4AF37;
     }
 
-    /* Responsive adjustments */
     @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-      }
-
-      .logo {
-        text-align: center;
-      }
-
       iframe {
         height: 200px;
       }
@@ -150,6 +179,11 @@
 <header class="site-header">
   <div class="container">
     <div class="logo">DIAMO <span>RYM</span> FASHION</div>
+
+    <!-- Hamburger Menu -->
+    <input type="checkbox" id="menu-checkbox">
+    <label for="menu-checkbox" class="menu-toggle">☰</label>
+
     <nav>
       <ul>
         <li><a href="index.html">Accueil</a></li>
@@ -167,7 +201,7 @@
   <h1>Contactez-nous</h1>
   <p>Vous avez un projet textile ? Écrivez-nous, nous vous répondrons rapidement.</p>
 
-  <!-- FORMULAIRE AVEC PHP -->
+  <!-- Contact Form -->
   <form class="card" action="send_mail.php" method="post">
     <input type="text" name="Nom" placeholder="Nom et prénom" required>
     <input type="email" name="Email" placeholder="Email" required>
@@ -199,4 +233,3 @@
 
 </body>
 </html>
-
