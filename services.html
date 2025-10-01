@@ -7,7 +7,6 @@
   <meta name="description" content="Découvrez les services de DIAMO RYM FASHION : confection textile, personnalisation, logistique et contrôle qualité pour les grandes marques.">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* Basic responsive styling */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -23,6 +22,7 @@
     .site-header {
       padding: 15px 0;
       background: inherit;
+      position: relative;
     }
 
     .logo {
@@ -46,10 +46,37 @@
     nav ul li a {
       text-decoration: none;
       color: inherit;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: 8px 12px;
+      display: block;
     }
 
     nav ul li a.active {
       font-weight: bold;
+      border-bottom: 2px solid currentColor;
+    }
+
+    /* Hamburger menu */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      position: absolute;
+      top: 18px;
+      right: 20px;
+    }
+
+    #menu-checkbox {
+      display: none;
+    }
+
+    #menu-checkbox:checked ~ nav ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: inherit;
+      padding: 15px;
     }
 
     main h1, main h2, main p {
@@ -82,6 +109,7 @@
       color: inherit;
       border-radius: 5px;
       margin-top: 10px;
+      border: 1px solid currentColor;
     }
 
     footer {
@@ -102,6 +130,7 @@
       .grid-3 {
         grid-template-columns: repeat(2, 1fr);
       }
+
       nav ul {
         justify-content: center;
       }
@@ -112,18 +141,12 @@
         grid-template-columns: 1fr;
       }
 
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-      }
-
       .logo {
         text-align: center;
       }
 
-      .cta h2 {
-        font-size: 1.2em;
+      .menu-toggle {
+        display: block;
       }
     }
   </style>
@@ -133,6 +156,11 @@
 <header class="site-header">
   <div class="container">
     <div class="logo">DIAMO <span>RYM</span> FASHION</div>
+
+    <!-- Hamburger menu -->
+    <input type="checkbox" id="menu-checkbox">
+    <label for="menu-checkbox" class="menu-toggle">☰</label>
+
     <nav>
       <ul>
         <li><a href="index.html">Accueil</a></li>
