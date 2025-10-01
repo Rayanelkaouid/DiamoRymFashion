@@ -12,6 +12,8 @@
       margin: 0;
       font-family: Arial, sans-serif;
       line-height: 1.6;
+      background: #000000;
+      color: #F5F5F5;
     }
 
     .container {
@@ -28,10 +30,12 @@
     .logo {
       font-size: 24px;
       font-weight: bold;
+      color: #D4AF37;
     }
 
     .logo span {
       font-weight: normal;
+      color: #F5F5F5;
     }
 
     nav ul {
@@ -46,69 +50,84 @@
     nav ul li a {
       text-decoration: none;
       color: inherit;
+      text-transform: uppercase;
+      font-weight: 500;
     }
 
     nav ul li a.active {
+      color: #D4AF37;
       font-weight: bold;
     }
 
     main h1, main h2 {
       margin-top: 20px;
+      color: #D4AF37;
     }
 
     .card {
-      background: inherit;
-      padding: 15px;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      background: #111111;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
       margin-bottom: 20px;
     }
 
     input, textarea {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      border: 1px solid #333333;
+      background: #111111;
+      color: #F5F5F5;
       box-sizing: border-box;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #777;
     }
 
     .btn {
       display: inline-block;
-      padding: 10px 20px;
-      text-decoration: none;
-      color: inherit;
-      border: 1px solid currentColor;
-      border-radius: 5px;
+      padding: 12px 30px;
+      border-radius: 30px;
+      margin: 5px 0;
+      font-weight: 600;
+      letter-spacing: 1px;
+      background: #D4AF37;
+      color: #000000;
+      border: none;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #b8932a;
     }
 
     iframe {
       border: 0;
       border-radius: 5px;
+      width: 100%;
+      height: 250px;
     }
 
     footer {
-      background: inherit;
-      padding: 15px 0;
+      background: #000000;
+      padding: 30px;
       text-align: center;
       margin-top: 30px;
+      border-top: 1px solid #333333;
+      color: #F5F5F5;
     }
 
     footer nav a {
       margin-left: 15px;
       text-decoration: none;
-      color: inherit;
+      color: #D4AF37;
     }
 
     /* Responsive adjustments */
-    @media (max-width: 1024px) {
-      nav ul {
-        justify-content: center;
-      }
-    }
-
     @media (max-width: 768px) {
       nav ul {
         flex-direction: column;
@@ -148,8 +167,8 @@
   <h1>Contactez-nous</h1>
   <p>Vous avez un projet textile ? Écrivez-nous, nous vous répondrons rapidement.</p>
 
-  <!-- FORMULAIRE AVEC MAILTO -->
-  <form class="card" action="mailto:relkaouid@gmail.com" method="post" enctype="text/plain">
+  <!-- FORMULAIRE AVEC PHP -->
+  <form class="card" action="send_mail.php" method="post">
     <input type="text" name="Nom" placeholder="Nom et prénom" required>
     <input type="email" name="Email" placeholder="Email" required>
     <input type="tel" name="Téléphone" placeholder="Téléphone">
@@ -162,11 +181,11 @@
     Adresse : LOTI ALMAJD RUE N 65, Tanger-Medina (AR)<br>
     Téléphone : +212 539361431<br>
     Mobile : +212 661449894<br>
-    Email : <a href="mailto:relkaouid@gmail.com">....@gmail.com</a>
+    Email : <a href="mailto:relkaouid@gmail.com">relkaouid@gmail.com</a>
   </p>
 
   <h2>Localisation</h2>
-  <iframe src="https://maps.google.com/maps?q=Tanger&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="250"></iframe>
+  <iframe src="https://maps.google.com/maps?q=Tanger&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
 </main>
 
 <footer>
