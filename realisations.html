@@ -6,6 +6,123 @@
   <title>Réalisations – DIAMO RYM FASHION</title>
   <meta name="description" content="Découvrez les projets réalisés par DIMO RYM FASHION pour des marques internationales comme Inditex.">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Basic responsive styling */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .site-header {
+      padding: 15px 0;
+      background: inherit;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      font-weight: normal;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 10px 0 0 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    nav ul li a.active {
+      font-weight: bold;
+    }
+
+    main h1, main h2, main p, blockquote {
+      margin-top: 20px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: inherit;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    blockquote {
+      font-style: italic;
+      padding: 15px;
+      border-left: 3px solid #ccc;
+      margin-top: 20px;
+    }
+
+    footer {
+      background: inherit;
+      padding: 15px 0;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    footer nav a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+      .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav ul {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+
+      .logo {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -61,7 +178,7 @@
     </div>
   </section>
 
-  <blockquote style="margin-top:20px;">
+  <blockquote>
     “DIAMO RYM FASHION est un partenaire fiable et compétent. Leur réactivité et leur engagement en matière de qualité font la différence.”
     – Client Inditex
   </blockquote>
